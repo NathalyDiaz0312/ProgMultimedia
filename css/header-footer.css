@@ -165,3 +165,28 @@
   color: var(--gray);
   font-size: 0.85rem;
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--dark-light);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    padding:1rem}
+
+  .nav-links.active{display:flex}
+
+  .menu-toggle {
+    display: block;
+  }
+}
