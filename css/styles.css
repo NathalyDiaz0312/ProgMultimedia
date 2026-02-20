@@ -112,7 +112,7 @@ img {
 
 /* ===== HERO ===== */
 .hero {
-  padding-top: 72px;
+  padding-top: 60px;
   min-height: 50vh;
   display: flex;
   align-items: center;
@@ -146,7 +146,7 @@ img {
 
 .hero-content p {
   font-size: 1.5rem;
-  color: var(--gray);
+  color: var(--dark-light);
   margin-bottom: 32px;
   max-width: 480px;
 }
@@ -181,7 +181,6 @@ img {
 
 .hero-image img {
   border-radius: 24px;
-  box-shadow: var(--shadow-lg);
   animation: floatImage 4s ease-in-out infinite;
   width: 780px;
   height: 520px;
@@ -205,7 +204,7 @@ img {
 
 /* ===== PRESENTACION ===== */
 .presentacion {
-  padding: 120px 120px;
+  padding: 120px 60px;
   background-color: var(--white);
   align-items: center;
   justify-content: center;
@@ -277,7 +276,7 @@ img {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--dark);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   transition: color var(--transition);
 }
 
@@ -309,12 +308,15 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 64px;
-  padding: 1rem 8rem;
+  padding: 1rem 4rem;
 }
 
 .detalles-image {
   flex: 1;
   position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .detalles-image img {
@@ -345,7 +347,7 @@ img {
   align-items: center;
   gap: 16px;
   font-size: 1.1rem;
-  color: var(--dark);
+  color: var(--dark-light);
 }
 
 .detalles-list li .icon-check {
@@ -431,7 +433,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 64px;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
 }
 
 .promo-image img {
@@ -446,15 +448,17 @@ img {
 }
 
 .promo-text h2 {
-  padding: 1rem 0;
   font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--dark);
 }
 
 .promo-text p {
-  padding: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
+  margin-bottom: 32px;
+  color: var(--dark-light);
 }
 
 /* ===== DELIVERY ===== */
@@ -471,15 +475,17 @@ img {
 }
 
 .delivery-text h2 {
-  padding: 2rem 0;
   font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--dark);
 }
 
 .delivery-text p {
-  padding: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-block: 15px 25px;
+  margin-bottom: 48px;
+  color: var(--gray);
 }
 
 .delivery-banner {
@@ -510,15 +516,17 @@ img {
 }
 
 .video-text h2 {
-  padding: 2rem 0;
   font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--dark);
 }
 
 .video-text p {
-  padding: 2rem 0;
   font-size: 1.2rem;
   margin-block: 15px 25px;
+  margin-bottom: 48px;
+  color: var(--gray);
 }
 
 .video-wrapper video {
@@ -739,7 +747,7 @@ img {
   margin-bottom: 16px;
 }
 
-.contacto-info > p {
+.contacto-info p {
   color: var(--gray);
   margin-bottom: 32px;
   line-height: 1.6;
@@ -941,29 +949,9 @@ img {
   .servicios-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: var(--dark-light);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    left: 0;
-    padding:1rem}
-
-  .nav-links.active{display:flex}
-
-  .menu-toggle {
-    display: block;
-  }
-
   .hero .container {
     flex-direction: column;
     text-align: center;
@@ -972,10 +960,11 @@ img {
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .hero-content p {
+    font-size: 1.2rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1034,17 +1023,7 @@ img {
   }
 
   .section-title {
-    font-size: 1.75rem;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer-brand .logo,
-  .footer-socials {
-    justify-content: center;
+    font-size: 1.8rem;
   }
 
   .contacto-socials {
@@ -1057,8 +1036,16 @@ img {
 }
 
 @media (max-width: 480px) {
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
   .hero-content h1 {
-    font-size: 1.7rem;
+    font-size: 2rem;
+  }
+
+  .delivery-img {
+    width: 400px;
   }
 
   .contacto-form {
