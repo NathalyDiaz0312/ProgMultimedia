@@ -208,4 +208,8 @@
   .btn-reservar.btn-reservar-desktop {
     display: none;
   }
+
+  .footer-grid {
+    flex-direction: column;
+  }
 }
